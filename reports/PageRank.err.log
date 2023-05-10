@@ -30,9 +30,7 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-data_TA=scrape_TA(172)
-data_TA_result=pd.DataFrame(data_TA)
-data_TA_result.columns = ["NPM", "Judul","Abstrak","jurusan"]
-data_TA_result
+from google.colab import drive
+drive.mount('/content/drive')
 -------------------
 

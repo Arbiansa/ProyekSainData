@@ -1,0 +1,87 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+#Normalisasi kata tidak baku
+normalize = pd.read_excel("/content/drive/MyDrive/prosaindata/tugas/Normalization Data.xlsx")
+
+normalize_word_dict = {}
+
+for row in normalize.iterrows():
+  if row[0] not in normalize_word_dict:
+    normalize_word_dict[row[0]] = row[1]
+
+def normalized_term(comment):
+  return [normalize_word_dict[term] if term in normalize_word_dict else term for term in comment]
+
+df['comment_normalize'] = df['review_token'].apply(normalized_term)
+df['comment_normalize'].head(20)
+------------------
+
+
+[0;31m[0m
+[0;31mFileNotFoundError[0mTraceback (most recent call last)
+[0;32m<ipython-input-13-e9fb25e1f0a6>[0m in [0;36m<cell line: 2>[0;34m()[0m
+[1;32m      1[0m [0;31m#Normalisasi kata tidak baku[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0mnormalize[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_excel[0m[0;34m([0m[0;34m"/content/drive/MyDrive/prosaindata/tugas/Normalization Data.xlsx"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      3[0m [0;34m[0m[0m
+[1;32m      4[0m [0mnormalize_word_dict[0m [0;34m=[0m [0;34m{[0m[0;34m}[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/util/_decorators.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
+[1;32m    209[0m                 [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    210[0m                     [0mkwargs[0m[0;34m[[0m[0mnew_arg_name[0m[0;34m][0m [0;34m=[0m [0mnew_arg_value[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 211[0;31m             [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    212[0m [0;34m[0m[0m
+[1;32m    213[0m         [0;32mreturn[0m [0mcast[0m[0;34m([0m[0mF[0m[0;34m,[0m [0mwrapper[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/util/_decorators.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
+[1;32m    329[0m                     [0mstacklevel[0m[0;34m=[0m[0mfind_stack_level[0m[0;34m([0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    330[0m                 )
+[0;32m--> 331[0;31m             [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    332[0m [0;34m[0m[0m
+[1;32m    333[0m         [0;31m# error: "Callable[[VarArg(Any), KwArg(Any)], Any]" has no[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/excel/_base.py[0m in [0;36mread_excel[0;34m(io, sheet_name, header, names, index_col, usecols, squeeze, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, parse_dates, date_parser, thousands, decimal, comment, skipfooter, convert_float, mangle_dupe_cols, storage_options)[0m
+[1;32m    480[0m     [0;32mif[0m [0;32mnot[0m [0misinstance[0m[0;34m([0m[0mio[0m[0;34m,[0m [0mExcelFile[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    481[0m         [0mshould_close[0m [0;34m=[0m [0;32mTrue[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 482[0;31m         [0mio[0m [0;34m=[0m [0mExcelFile[0m[0;34m([0m[0mio[0m[0;34m,[0m [0mstorage_options[0m[0;34m=[0m[0mstorage_options[0m[0;34m,[0m [0mengine[0m[0;34m=[0m[0mengine[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    483[0m     [0;32melif[0m [0mengine[0m [0;32mand[0m [0mengine[0m [0;34m!=[0m [0mio[0m[0;34m.[0m[0mengine[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    484[0m         raise ValueError(
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/excel/_base.py[0m in [0;36m__init__[0;34m(self, path_or_buffer, engine, storage_options)[0m
+[1;32m   1650[0m                 [0mext[0m [0;34m=[0m [0;34m"xls"[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1651[0m             [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1652[0;31m                 ext = inspect_excel_format(
+[0m[1;32m   1653[0m                     [0mcontent_or_path[0m[0;34m=[0m[0mpath_or_buffer[0m[0;34m,[0m [0mstorage_options[0m[0;34m=[0m[0mstorage_options[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1654[0m                 )
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/excel/_base.py[0m in [0;36minspect_excel_format[0;34m(content_or_path, storage_options)[0m
+[1;32m   1523[0m         [0mcontent_or_path[0m [0;34m=[0m [0mBytesIO[0m[0;34m([0m[0mcontent_or_path[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1524[0m [0;34m[0m[0m
+[0;32m-> 1525[0;31m     with get_handle(
+[0m[1;32m   1526[0m         [0mcontent_or_path[0m[0;34m,[0m [0;34m"rb"[0m[0;34m,[0m [0mstorage_options[0m[0;34m=[0m[0mstorage_options[0m[0;34m,[0m [0mis_text[0m[0;34m=[0m[0;32mFalse[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1527[0m     ) as handle:
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/common.py[0m in [0;36mget_handle[0;34m(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)[0m
+[1;32m    863[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    864[0m             [0;31m# Binary mode[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 865[0;31m             [0mhandle[0m [0;34m=[0m [0mopen[0m[0;34m([0m[0mhandle[0m[0;34m,[0m [0mioargs[0m[0;34m.[0m[0mmode[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    866[0m         [0mhandles[0m[0;34m.[0m[0mappend[0m[0;34m([0m[0mhandle[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    867[0m [0;34m[0m[0m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '/content/drive/MyDrive/prosaindata/tugas/Normalization Data.xlsx'
+

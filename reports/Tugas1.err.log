@@ -1,0 +1,78 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+#mangambil data twitter dengan TwitterSearchScrapper dan meletakan dalam array
+for i,tweet in enumerate(sntwitter.TwitterSearchScraper('ganjar pranowo since:2022-01-01 until:2023-02-20').get_items()):
+  if i>500:
+    break
+  tweet_list.append([tweet.user.username,tweet.content,tweet.user.location])
+------------------
+
+----- stderr -----
+ERROR:snscrape.base:Error retrieving https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&include_ext_has_nft_avatar=1&include_ext_is_blue_verified=1&include_ext_verified_type=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_ext_limited_action_results=false&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_ext_collab_control=true&include_ext_views=true&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&include_ext_sensitive_media_warning=true&include_ext_trusted_friends_metadata=true&send_error_codes=true&simple_quoted_tweet=true&q=ganjar+pranowo+since%3A2022-01-01+until%3A2023-02-20&tweet_search_mode=live&count=20&query_source=spelling_expansion_revert_click&pc=1&spelling_corrections=1&include_ext_edit_control=true&ext=mediaStats%2ChighlightedLabel%2ChasNftAvatar%2CvoiceInfo%2Cenrichments%2CsuperFollowMetadata%2CunmentionInfo%2CeditControl%2Ccollab_control%2Cvibe: blocked (403)
+----- stderr -----
+CRITICAL:snscrape.base:4 requests to https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&include_ext_has_nft_avatar=1&include_ext_is_blue_verified=1&include_ext_verified_type=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_ext_limited_action_results=false&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_ext_collab_control=true&include_ext_views=true&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&include_ext_sensitive_media_warning=true&include_ext_trusted_friends_metadata=true&send_error_codes=true&simple_quoted_tweet=true&q=ganjar+pranowo+since%3A2022-01-01+until%3A2023-02-20&tweet_search_mode=live&count=20&query_source=spelling_expansion_revert_click&pc=1&spelling_corrections=1&include_ext_edit_control=true&ext=mediaStats%2ChighlightedLabel%2ChasNftAvatar%2CvoiceInfo%2Cenrichments%2CsuperFollowMetadata%2CunmentionInfo%2CeditControl%2Ccollab_control%2Cvibe failed, giving up.
+----- stderr -----
+CRITICAL:snscrape.base:Errors: blocked (403), blocked (403), blocked (403), blocked (403)
+------------------
+
+[0;31m[0m
+[0;31mScraperException[0mTraceback (most recent call last)
+[0;32m<ipython-input-4-ec227e685a13>[0m in [0;36m<cell line: 2>[0;34m()[0m
+[1;32m      1[0m [0;31m#mangambil data twitter dengan TwitterSearchScrapper dan meletakan dalam array[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0;32mfor[0m [0mi[0m[0;34m,[0m[0mtweet[0m [0;32min[0m [0menumerate[0m[0;34m([0m[0msntwitter[0m[0;34m.[0m[0mTwitterSearchScraper[0m[0;34m([0m[0;34m'ganjar pranowo since:2022-01-01 until:2023-02-20'[0m[0;34m)[0m[0;34m.[0m[0mget_items[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      3[0m   [0;32mif[0m [0mi[0m[0;34m>[0m[0;36m500[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m     [0;32mbreak[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m   [0mtweet_list[0m[0;34m.[0m[0mappend[0m[0;34m([0m[0;34m[[0m[0mtweet[0m[0;34m.[0m[0muser[0m[0;34m.[0m[0musername[0m[0;34m,[0m[0mtweet[0m[0;34m.[0m[0mcontent[0m[0;34m,[0m[0mtweet[0m[0;34m.[0m[0muser[0m[0;34m.[0m[0mlocation[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/snscrape/modules/twitter.py[0m in [0;36mget_items[0;34m(self)[0m
+[1;32m   1659[0m                 [0;32mdel[0m [0mparams[0m[0;34m[[0m[0;34m'cursor'[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1660[0m [0;34m[0m[0m
+[0;32m-> 1661[0;31m                 [0;32mfor[0m [0mobj[0m [0;32min[0m [0mself[0m[0;34m.[0m[0m_iter_api_data[0m[0;34m([0m[0;34m'https://api.twitter.com/2/search/adaptive.json'[0m[0;34m,[0m [0m_TwitterAPIType[0m[0;34m.[0m[0mV2[0m[0;34m,[0m [0mparams[0m[0;34m,[0m [0mpaginationParams[0m[0;34m,[0m [0mcursor[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_cursor[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1662[0m                         [0;32myield[0m [0;32mfrom[0m [0mself[0m[0;34m.[0m[0m_v2_timeline_instructions_to_tweets_or_users[0m[0;34m([0m[0mobj[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1663[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/snscrape/modules/twitter.py[0m in [0;36m_iter_api_data[0;34m(self, endpoint, apiType, params, paginationParams, cursor, direction)[0m
+[1;32m    759[0m                 [0;32mwhile[0m [0;32mTrue[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    760[0m                         [0m_logger[0m[0;34m.[0m[0minfo[0m[0;34m([0m[0;34mf'Retrieving scroll page {cursor}'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 761[0;31m                         [0mobj[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_get_api_data[0m[0;34m([0m[0mendpoint[0m[0;34m,[0m [0mapiType[0m[0;34m,[0m [0mreqParams[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    762[0m                         [0;32myield[0m [0mobj[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    763[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/snscrape/modules/twitter.py[0m in [0;36m_get_api_data[0;34m(self, endpoint, apiType, params)[0m
+[1;32m    725[0m                 [0;32mif[0m [0mapiType[0m [0;32mis[0m [0m_TwitterAPIType[0m[0;34m.[0m[0mGRAPHQL[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    726[0m                         [0mparams[0m [0;34m=[0m [0murllib[0m[0;34m.[0m[0mparse[0m[0;34m.[0m[0murlencode[0m[0;34m([0m[0;34m{[0m[0mk[0m[0;34m:[0m [0mjson[0m[0;34m.[0m[0mdumps[0m[0;34m([0m[0mv[0m[0;34m,[0m [0mseparators[0m [0;34m=[0m [0;34m([0m[0;34m','[0m[0;34m,[0m [0;34m':'[0m[0;34m)[0m[0;34m)[0m [0;32mfor[0m [0mk[0m[0;34m,[0m [0mv[0m [0;32min[0m [0mparams[0m[0;34m.[0m[0mitems[0m[0;34m([0m[0;34m)[0m[0;34m}[0m[0;34m,[0m [0mquote_via[0m [0;34m=[0m [0murllib[0m[0;34m.[0m[0mparse[0m[0;34m.[0m[0mquote[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 727[0;31m                 [0mr[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_get[0m[0;34m([0m[0mendpoint[0m[0;34m,[0m [0mparams[0m [0;34m=[0m [0mparams[0m[0;34m,[0m [0mheaders[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_apiHeaders[0m[0;34m,[0m [0mresponseOkCallback[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_check_api_response[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    728[0m                 [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    729[0m                         [0mobj[0m [0;34m=[0m [0mr[0m[0;34m.[0m[0mjson[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/snscrape/base.py[0m in [0;36m_get[0;34m(self, *args, **kwargs)[0m
+[1;32m    249[0m [0;34m[0m[0m
+[1;32m    250[0m         [0;32mdef[0m [0m_get[0m[0;34m([0m[0mself[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 251[0;31m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_request[0m[0;34m([0m[0;34m'GET'[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    252[0m [0;34m[0m[0m
+[1;32m    253[0m         [0;32mdef[0m [0m_post[0m[0;34m([0m[0mself[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/snscrape/base.py[0m in [0;36m_request[0;34m(self, method, url, params, data, headers, timeout, responseOkCallback, allowRedirects, proxies)[0m
+[1;32m    245[0m                         [0m_logger[0m[0;34m.[0m[0mfatal[0m[0;34m([0m[0mmsg[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    246[0m                         [0m_logger[0m[0;34m.[0m[0mfatal[0m[0;34m([0m[0;34mf'Errors: {", ".join(errors)}'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 247[0;31m                         [0;32mraise[0m [0mScraperException[0m[0;34m([0m[0mmsg[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    248[0m                 [0;32mraise[0m [0mRuntimeError[0m[0;34m([0m[0;34m'Reached unreachable code'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    249[0m [0;34m[0m[0m
+
+[0;31mScraperException[0m: 4 requests to https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&include_ext_has_nft_avatar=1&include_ext_is_blue_verified=1&include_ext_verified_type=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_ext_limited_action_results=false&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_ext_collab_control=true&include_ext_views=true&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&include_ext_sensitive_media_warning=true&include_ext_trusted_friends_metadata=true&send_error_codes=true&simple_quoted_tweet=true&q=ganjar+pranowo+since%3A2022-01-01+until%3A2023-02-20&tweet_search_mode=live&count=20&query_source=spelling_expansion_revert_click&pc=1&spelling_corrections=1&include_ext_edit_control=true&ext=mediaStats%2ChighlightedLabel%2ChasNftAvatar%2CvoiceInfo%2Cenrichments%2CsuperFollowMetadata%2CunmentionInfo%2CeditControl%2Ccollab_control%2Cvibe failed, giving up.
+

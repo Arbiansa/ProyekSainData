@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Pipeline';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="UTS" href="UTS.html" />
+    <link rel="next" title="Tugas UTS : Processing Data PTA" href="UTS.html" />
     <link rel="prev" title="Tugas 3 - Crawling Data Berita Online" href="Tugas3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -170,9 +170,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
-
-
+<li class="toctree-l1"><a class="reference internal" href="UTS.html">Tugas UTS : Processing Data PTA</a></li>
 
 </ul>
 
@@ -403,7 +401,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: psycopg2 in /usr/local/lib/python3.9/dist-packages (2.9.5)
+Requirement already satisfied: psycopg2 in /usr/local/lib/python3.10/dist-packages (2.9.6)
 </pre></div>
 </div>
 </div>
@@ -500,16 +498,65 @@ Requirement already satisfied: psycopg2 in /usr/local/lib/python3.9/dist-package
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: mysqlclient in /usr/local/lib/python3.9/dist-packages (2.1.1)
+Collecting mysqlclient
+  Downloading mysqlclient-2.1.1.tar.gz (88 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/88.1 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">88.1/88.1 kB</span> <span class=" -Color -Color-Red">4.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
+Building wheels for collected packages: mysqlclient
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for mysqlclient (setup.py) ... ?25l?25hdone
+  Created wheel for mysqlclient: filename=mysqlclient-2.1.1-cp310-cp310-linux_x86_64.whl size=108353 sha256=e32a00cbc76573f78383e3be06e6f2f9f30c13f52deafbfcf705cddde2215c01
+  Stored in directory: /root/.cache/pip/wheels/7d/34/ba/a769c165b01646816afdf9bf792e847ef149693fee432b6b65
+Successfully built mysqlclient
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: mysqlclient
+Successfully installed mysqlclient-2.1.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: mysql-connector-python in /usr/local/lib/python3.9/dist-packages (8.0.32)
-Requirement already satisfied: protobuf&lt;=3.20.3,&gt;=3.11.0 in /usr/local/lib/python3.9/dist-packages (from mysql-connector-python) (3.19.6)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting mysql-connector-python
+  Downloading mysql_connector_python-8.0.33-cp310-cp310-manylinux1_x86_64.whl (27.4 MB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/27.4 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.4/27.4 MB</span> <span class=" -Color -Color-Red">12.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
+     ━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.6/27.4 MB</span> <span class=" -Color -Color-Red">51.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">10.2/27.4 MB</span> <span class=" -Color -Color-Red">96.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">16.7/27.4 MB</span> <span class=" -Color -Color-Red">188.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━ <span class=" -Color -Color-Green">22.5/27.4 MB</span> <span class=" -Color -Color-Red">172.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">27.4/27.4 MB</span> <span class=" -Color -Color-Red">176.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">27.4/27.4 MB</span> <span class=" -Color -Color-Red">176.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">27.4/27.4 MB</span> <span class=" -Color -Color-Red">176.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">27.4/27.4 MB</span> <span class=" -Color -Color-Red">53.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: protobuf&lt;=3.20.3,&gt;=3.11.0 in /usr/local/lib/python3.10/dist-packages (from mysql-connector-python) (3.20.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: mysql-connector-python
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed mysql-connector-python-8.0.33
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: pymysql in /usr/local/lib/python3.9/dist-packages (1.0.2)
+Collecting pymysql
+  Downloading PyMySQL-1.0.3-py3-none-any.whl (43 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/43.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">43.7/43.7 kB</span> <span class=" -Color -Color-Red">2.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: pymysql
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed pymysql-1.0.3
 </pre></div>
 </div>
 </div>
@@ -530,20 +577,49 @@ Requirement already satisfied: pymysql in /usr/local/lib/python3.9/dist-packages
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      id petallength
-0      1         1.4
-1      2         1.4
-2      3         1.3
-3      4         1.5
-4      5         1.4
-..   ...         ...
-145  146         5.2
-146  147         5.0
-147  148         5.2
-148  149         5.4
-149  150         5.1
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">gaierror</span>Traceback (most recent call last)
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pymysql/connections.py</span> in <span class="ni">connect</span><span class="nt">(self, sock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">615</span>                         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">616</span>                             <span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">create_connection</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">617</span>                                 <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">connect_timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
 
-[150 rows x 2 columns]
+<span class="nn">/usr/lib/python3.10/socket.py</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address)</span>
+<span class="g g-Whitespace">    </span><span class="mi">823</span>     <span class="n">err</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">--&gt; </span><span class="mi">824</span>     <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">825</span>         <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+
+<span class="nn">/usr/lib/python3.10/socket.py</span> in <span class="ni">getaddrinfo</span><span class="nt">(host, port, family, type, proto, flags)</span>
+<span class="g g-Whitespace">    </span><span class="mi">954</span>     <span class="n">addrlist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">--&gt; </span><span class="mi">955</span>     <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">_socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">flags</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">956</span>         <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+
+<span class="ne">gaierror</span>: [Errno -2] Name or service not known
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">OperationalError</span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-4-c465df568ce3&gt;</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pymysql</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">mydb</span> <span class="o">=</span> <span class="n">pymysql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>   <span class="n">db</span><span class="o">=</span><span class="s2">&quot;petallenght&quot;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span><span class="n">passwd</span><span class="o">=</span><span class="s2">&quot;OjUbSScu&quot;</span><span class="p">,</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;mysql-115799-0.cloudclusters.net&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">14338</span><span class="p">,</span><span class="n">autocommit</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">mydb</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pymysql/connections.py</span> in <span class="ni">__init__</span><span class="nt">(self, user, password, host, database, unix_socket, port, charset, sql_mode, read_default_file, conv, use_unicode, client_flag, cursorclass, init_command, connect_timeout, read_default_group, autocommit, local_infile, max_allowed_packet, defer_connect, auth_plugin_map, read_timeout, write_timeout, bind_address, binary_prefix, program_name, server_public_key, ssl, ssl_ca, ssl_cert, ssl_disabled, ssl_key, ssl_verify_cert, ssl_verify_identity, compress, named_pipe, passwd, db)</span>
+<span class="g g-Whitespace">    </span><span class="mi">350</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">351</span>         <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">352</span>             <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">353</span> 
+<span class="g g-Whitespace">    </span><span class="mi">354</span>     <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pymysql/connections.py</span> in <span class="ni">connect</span><span class="nt">(self, sock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">666</span>                 <span class="k">if</span> <span class="n">DEBUG</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">667</span>                     <span class="nb">print</span><span class="p">(</span><span class="n">exc</span><span class="o">.</span><span class="n">traceback</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">668</span>                 <span class="k">raise</span> <span class="n">exc</span>
+<span class="g g-Whitespace">    </span><span class="mi">669</span> 
+<span class="g g-Whitespace">    </span><span class="mi">670</span>             <span class="c1"># If e is neither DatabaseError or IOError, It&#39;s a bug.</span>
+
+<span class="ne">OperationalError</span>: (2003, &quot;Can&#39;t connect to MySQL server on &#39;mysql-115799-0.cloudclusters.net&#39; ([Errno -2] Name or service not known)&quot;)
 </pre></div>
 </div>
 </div>
@@ -559,7 +635,11 @@ Requirement already satisfied: pymysql in /usr/local/lib/python3.9/dist-packages
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: pymssql in /usr/local/lib/python3.9/dist-packages (2.2.7)
+Collecting pymssql
+  Downloading pymssql-2.2.7-cp39-cp39-manylinux_2_24_x86_64.whl (3.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.2/3.2 MB</span> <span class=" -Color -Color-Red">31.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: pymssql
+Successfully installed pymssql-2.2.7
 </pre></div>
 </div>
 </div>
@@ -682,12 +762,8 @@ Requirement already satisfied: pymssql in /usr/local/lib/python3.9/dist-packages
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Connecting to the PostgreSQL database...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Connection successful
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      id sepallength
+Connection successful
+      id sepallength
 0      1         5.1
 1      2         4.9
 2      3         4.7
@@ -719,7 +795,7 @@ Requirement already satisfied: pymssql in /usr/local/lib/python3.9/dist-packages
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-81b4f89b-5cfc-46b1-ad0e-d04eb1dc8891">
+  <div id="df-05cb1c06-b557-4aef-b0c7-8db681cd4bb1">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -887,7 +963,7 @@ Requirement already satisfied: pymssql in /usr/local/lib/python3.9/dist-packages
 </table>
 <p>150 rows × 9 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-81b4f89b-5cfc-46b1-ad0e-d04eb1dc8891')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-05cb1c06-b557-4aef-b0c7-8db681cd4bb1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -938,12 +1014,12 @@ Requirement already satisfied: pymssql in /usr/local/lib/python3.9/dist-packages
 
       <script>
         const buttonEl =
-          document.querySelector('#df-81b4f89b-5cfc-46b1-ad0e-d04eb1dc8891 button.colab-df-convert');
+          document.querySelector('#df-05cb1c06-b557-4aef-b0c7-8db681cd4bb1 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-81b4f89b-5cfc-46b1-ad0e-d04eb1dc8891');
+          const element = document.querySelector('#df-05cb1c06-b557-4aef-b0c7-8db681cd4bb1');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -976,7 +1052,7 @@ Requirement already satisfied: pymssql in /usr/local/lib/python3.9/dist-packages
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a7276e3b-3a7d-42ad-a172-eff7512f39ed">
+  <div id="df-8d260f0c-02d8-4780-b2b4-21101f41c0bf">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1096,7 +1172,7 @@ Requirement already satisfied: pymssql in /usr/local/lib/python3.9/dist-packages
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a7276e3b-3a7d-42ad-a172-eff7512f39ed')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8d260f0c-02d8-4780-b2b4-21101f41c0bf')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1147,12 +1223,12 @@ Requirement already satisfied: pymssql in /usr/local/lib/python3.9/dist-packages
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a7276e3b-3a7d-42ad-a172-eff7512f39ed button.colab-df-convert');
+          document.querySelector('#df-8d260f0c-02d8-4780-b2b4-21101f41c0bf button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a7276e3b-3a7d-42ad-a172-eff7512f39ed');
+          const element = document.querySelector('#df-8d260f0c-02d8-4780-b2b4-21101f41c0bf');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1590,7 +1666,7 @@ data test sebesar 20%</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">UTS</p>
+        <p class="prev-next-title">Tugas UTS : Processing Data PTA</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

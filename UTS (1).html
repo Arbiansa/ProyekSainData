@@ -60,10 +60,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'UTS';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'UTS (1)';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Tugas Pipelines" href="Pipeline.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,7 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Tugas1.html">Tugas 1 - Crawling Data Twitter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas2.html">Tugas 2 - Crawling Data PTA Trunojoyo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas3.html">Tugas 3 - Crawling Data Berita Online</a></li>
@@ -169,7 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas UTS : Processing Data PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS.html">Tugas UTS : Processing Data PTA</a></li>
 
 </ul>
 
@@ -242,7 +241,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/Arbiansa/ProyekSainData/issues/new?title=Issue%20on%20page%20%2FUTS.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Arbiansa/ProyekSainData/issues/new?title=Issue%20on%20page%20%2FUTS (1).html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/UTS.ipynb" target="_blank"
+      <li><a href="_sources/UTS (1).ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -434,7 +433,7 @@ document.write(`
 <h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/Arbiansa/ProyekSainData/main/DataOlah_Pta.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/ranianuraini/prosainsdata/main/Data_PTA.csv&#39;</span><span class="p">)</span>
 <span class="c1"># df = df.drop([&#39;Unnamed: 0.1&#39;], axis=1)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -442,7 +441,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7cb7b148-4cc4-4d7d-aaf9-e4c47ecc49a4">
+  <div id="df-7820b001-6cff-4cae-af4f-c20ea2982947">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -462,76 +461,58 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>NPM</th>
       <th>Judul</th>
       <th>Abstrak</th>
       <th>Prodi</th>
       <th>Label</th>
-      <th>judul_tokens</th>
-      <th>abstrak_tokens</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0</td>
       <td>40411100468</td>
-      <td>perancangan dan implementasi sistem database t...</td>
-      <td>sistem informasi akademik siakad merupakan sis...</td>
+      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE T...</td>
+      <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
       <td>Teknik Informatika</td>
       <td>RPL</td>
-      <td>['perancangan', 'implementasi', 'sistem', 'dat...</td>
-      <td>sistem informasi akademik siakad sistem inform...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1</td>
       <td>40411100476</td>
-      <td>aplikasi kontrol dan monitoring jaringan kompu...</td>
-      <td>berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...</td>
+      <td>Berjalannya koneksi jaringan komputer dengan l...</td>
       <td>Teknik Informatika</td>
       <td>RPL</td>
-      <td>['aplikasi', 'kontrol', 'monitoring', 'jaringa...</td>
-      <td>jalan koneksi jaring komputer lancar ganggu ha...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2</td>
       <td>40411100480</td>
-      <td>rancang bangun aplikasi proxy server untukenkr...</td>
-      <td>web server adalah sebuah perangkat lunak serve...</td>
+      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUKENKR...</td>
+      <td>Web server adalah sebuah perangkat lunak serve...</td>
       <td>Teknik Informatika</td>
       <td>RPL</td>
-      <td>['rancang', 'bangun', 'aplikasi', 'proxy', 'se...</td>
-      <td>web server perangkat lunak server berfungsimen...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3</td>
       <td>70411100070</td>
-      <td>sistem pendukung keputusan optimasi penjadwala...</td>
-      <td>penjadwalan kuliah di perguruan tinggi merupak...</td>
+      <td>SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...</td>
+      <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
       <td>Teknik Informatika</td>
       <td>komputasi</td>
-      <td>['sistem', 'pendukung', 'keputusan', 'optimasi...</td>
-      <td>jadwal kuliah guru kompleks masalah variabel t...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>4</td>
       <td>80411100115</td>
-      <td>sistem augmented reality animasi benda bergera...</td>
-      <td>seiring perkembangan teknologi yang ada diduni...</td>
+      <td>SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...</td>
+      <td>Seiring perkembangan teknologi yang ada diduni...</td>
       <td>Teknik Informatika</td>
       <td>komputasi</td>
-      <td>['sistem', 'augmented', 'reality', 'animasi', ...</td>
-      <td>iring kembang teknologi dunia muncul teknologi...</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7cb7b148-4cc4-4d7d-aaf9-e4c47ecc49a4')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7820b001-6cff-4cae-af4f-c20ea2982947')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -582,12 +563,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7cb7b148-4cc4-4d7d-aaf9-e4c47ecc49a4 button.colab-df-convert');
+          document.querySelector('#df-7820b001-6cff-4cae-af4f-c20ea2982947 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7cb7b148-4cc4-4d7d-aaf9-e4c47ecc49a4');
+          const element = document.querySelector('#df-7820b001-6cff-4cae-af4f-c20ea2982947');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -620,14 +601,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unnamed: 0        0
-NPM               0
-Judul             0
-Abstrak           0
-Prodi             0
-Label             0
-judul_tokens      0
-abstrak_tokens    0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NPM         0
+Judul       6
+Abstrak    25
+Prodi       0
+Label      43
 dtype: int64
 </pre></div>
 </div>
@@ -651,14 +629,11 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unnamed: 0        0
-NPM               0
-Judul             0
-Abstrak           0
-Prodi             0
-Label             0
-judul_tokens      0
-abstrak_tokens    0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NPM        0
+Judul      0
+Abstrak    0
+Prodi      0
+Label      0
 dtype: int64
 </pre></div>
 </div>
@@ -675,14 +650,11 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unnamed: 0        809
-NPM               809
-Judul             809
-Abstrak           809
-Prodi             809
-Label             809
-judul_tokens      809
-abstrak_tokens    809
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NPM        810
+Judul      810
+Abstrak    810
+Prodi      810
+Label      810
 dtype: int64
 </pre></div>
 </div>
@@ -701,7 +673,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>komputasi    572
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>komputasi    573
 RPL          198
 PBA           39
 Name: Label, dtype: int64
@@ -723,7 +695,7 @@ Name: Label, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/e1da938df68717d4efb43c49dc6eca51c98ec68edcbe5b1d5900b6a8a8d34a02.png" src="_images/e1da938df68717d4efb43c49dc6eca51c98ec68edcbe5b1d5900b6a8a8d34a02.png" />
+<img alt="_images/0057711b0b4623c9e3710a35519578dd177bcb3111dce5eccb968fba71367e36.png" src="_images/0057711b0b4623c9e3710a35519578dd177bcb3111dce5eccb968fba71367e36.png" />
 </div>
 </div>
 </div>
@@ -775,7 +747,7 @@ Name: Label, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-cac92d83-b0d0-475a-8ee2-ea3c77e1b6c0">
+  <div id="df-2c2b6ed7-87a9-4309-b710-8d7ad1dfdc16">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -795,76 +767,58 @@ Name: Label, dtype: int64
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>NPM</th>
       <th>Judul</th>
       <th>Abstrak</th>
       <th>Prodi</th>
       <th>Label</th>
-      <th>judul_tokens</th>
-      <th>abstrak_tokens</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0</td>
       <td>40411100468</td>
       <td>perancangan dan implementasi sistem database t...</td>
       <td>sistem informasi akademik siakad merupakan sis...</td>
       <td>Teknik Informatika</td>
       <td>RPL</td>
-      <td>['perancangan', 'implementasi', 'sistem', 'dat...</td>
-      <td>sistem informasi akademik siakad sistem inform...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1</td>
       <td>40411100476</td>
       <td>aplikasi kontrol dan monitoring jaringan kompu...</td>
       <td>berjalannya koneksi jaringan komputer dengan l...</td>
       <td>Teknik Informatika</td>
       <td>RPL</td>
-      <td>['aplikasi', 'kontrol', 'monitoring', 'jaringa...</td>
-      <td>jalan koneksi jaring komputer lancar ganggu ha...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2</td>
       <td>40411100480</td>
       <td>rancang bangun aplikasi proxy server untukenkr...</td>
       <td>web server adalah sebuah perangkat lunak serve...</td>
       <td>Teknik Informatika</td>
       <td>RPL</td>
-      <td>['rancang', 'bangun', 'aplikasi', 'proxy', 'se...</td>
-      <td>web server perangkat lunak server berfungsimen...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3</td>
       <td>70411100070</td>
       <td>sistem pendukung keputusan optimasi penjadwala...</td>
       <td>penjadwalan kuliah di perguruan tinggi merupak...</td>
       <td>Teknik Informatika</td>
       <td>komputasi</td>
-      <td>['sistem', 'pendukung', 'keputusan', 'optimasi...</td>
-      <td>jadwal kuliah guru kompleks masalah variabel t...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>4</td>
       <td>80411100115</td>
       <td>sistem augmented reality animasi benda bergera...</td>
       <td>seiring perkembangan teknologi yang ada diduni...</td>
       <td>Teknik Informatika</td>
       <td>komputasi</td>
-      <td>['sistem', 'augmented', 'reality', 'animasi', ...</td>
-      <td>iring kembang teknologi dunia muncul teknologi...</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-cac92d83-b0d0-475a-8ee2-ea3c77e1b6c0')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2c2b6ed7-87a9-4309-b710-8d7ad1dfdc16')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -915,12 +869,12 @@ Name: Label, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-cac92d83-b0d0-475a-8ee2-ea3c77e1b6c0 button.colab-df-convert');
+          document.querySelector('#df-2c2b6ed7-87a9-4309-b710-8d7ad1dfdc16 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-cac92d83-b0d0-475a-8ee2-ea3c77e1b6c0');
+          const element = document.querySelector('#df-2c2b6ed7-87a9-4309-b710-8d7ad1dfdc16');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -970,14 +924,11 @@ Name: Label, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unnamed: 0        0
-NPM               0
-Judul             0
-Abstrak           0
-Prodi             0
-Label             0
-judul_tokens      0
-abstrak_tokens    0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NPM        0
+Judul      0
+Abstrak    0
+Prodi      0
+Label      0
 dtype: int64
 </pre></div>
 </div>
@@ -992,7 +943,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>809
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>810
 </pre></div>
 </div>
 </div>
@@ -1009,7 +960,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-06005d57-5525-4ba0-ab4a-b00d31aae96b">
+  <div id="df-571b8415-46f8-403d-82e6-e30c8c571a04">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1029,21 +980,26 @@ dtype: int64
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>NPM</th>
       <th>Judul</th>
       <th>Abstrak</th>
       <th>Prodi</th>
       <th>Label</th>
-      <th>judul_tokens</th>
-      <th>abstrak_tokens</th>
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <th>728</th>
+      <td>120411100015</td>
+      <td>sistem pendukung keputusan pemilihan pemain bo...</td>
+      <td>peningkatan pembinaan permai bola voli terutam...</td>
+      <td>Teknik Informatika</td>
+      <td>komputasi</td>
+    </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-06005d57-5525-4ba0-ab4a-b00d31aae96b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-571b8415-46f8-403d-82e6-e30c8c571a04')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1094,12 +1050,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-06005d57-5525-4ba0-ab4a-b00d31aae96b button.colab-df-convert');
+          document.querySelector('#df-571b8415-46f8-403d-82e6-e30c8c571a04 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-06005d57-5525-4ba0-ab4a-b00d31aae96b');
+          const element = document.querySelector('#df-571b8415-46f8-403d-82e6-e30c8c571a04');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1134,7 +1090,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-63a08c12-9645-496d-95d1-862778c0fcce">
+  <div id="df-0a6cd82a-4bdc-4cd9-86c1-a2e03a6c2406">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1154,21 +1110,18 @@ dtype: int64
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>NPM</th>
       <th>Judul</th>
       <th>Abstrak</th>
       <th>Prodi</th>
       <th>Label</th>
-      <th>judul_tokens</th>
-      <th>abstrak_tokens</th>
     </tr>
   </thead>
   <tbody>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-63a08c12-9645-496d-95d1-862778c0fcce')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0a6cd82a-4bdc-4cd9-86c1-a2e03a6c2406')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1219,12 +1172,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-63a08c12-9645-496d-95d1-862778c0fcce button.colab-df-convert');
+          document.querySelector('#df-0a6cd82a-4bdc-4cd9-86c1-a2e03a6c2406 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-63a08c12-9645-496d-95d1-862778c0fcce');
+          const element = document.querySelector('#df-0a6cd82a-4bdc-4cd9-86c1-a2e03a6c2406');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1260,7 +1213,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4f000e54-7946-4e44-9fe0-0794069668a2">
+  <div id="df-93c41d47-4249-429b-b257-13c43b59fae4">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1280,21 +1233,18 @@ dtype: int64
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>NPM</th>
       <th>Judul</th>
       <th>Abstrak</th>
       <th>Prodi</th>
       <th>Label</th>
-      <th>judul_tokens</th>
-      <th>abstrak_tokens</th>
     </tr>
   </thead>
   <tbody>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4f000e54-7946-4e44-9fe0-0794069668a2')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-93c41d47-4249-429b-b257-13c43b59fae4')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1345,12 +1295,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4f000e54-7946-4e44-9fe0-0794069668a2 button.colab-df-convert');
+          document.querySelector('#df-93c41d47-4249-429b-b257-13c43b59fae4 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4f000e54-7946-4e44-9fe0-0794069668a2');
+          const element = document.querySelector('#df-93c41d47-4249-429b-b257-13c43b59fae4');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1411,76 +1361,57 @@ dtype: int64
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading collection &#39;popular&#39;
 [nltk_data]    | 
 [nltk_data]    | Downloading package cmudict to /root/nltk_data...
-[nltk_data]    |   Unzipping corpora/cmudict.zip.
+[nltk_data]    |   Package cmudict is already up-to-date!
 [nltk_data]    | Downloading package gazetteers to /root/nltk_data...
-[nltk_data]    |   Unzipping corpora/gazetteers.zip.
+[nltk_data]    |   Package gazetteers is already up-to-date!
 [nltk_data]    | Downloading package genesis to /root/nltk_data...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping corpora/genesis.zip.
+[nltk_data]    |   Package genesis is already up-to-date!
 [nltk_data]    | Downloading package gutenberg to /root/nltk_data...
-[nltk_data]    |   Unzipping corpora/gutenberg.zip.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package inaugural to /root/nltk_data...
-[nltk_data]    |   Unzipping corpora/inaugural.zip.
+[nltk_data]    |   Package gutenberg is already up-to-date!
+[nltk_data]    | Downloading package inaugural to /root/nltk_data...
+[nltk_data]    |   Package inaugural is already up-to-date!
 [nltk_data]    | Downloading package movie_reviews to
 [nltk_data]    |     /root/nltk_data...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping corpora/movie_reviews.zip.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package names to /root/nltk_data...
-[nltk_data]    |   Unzipping corpora/names.zip.
+[nltk_data]    |   Package movie_reviews is already up-to-date!
+[nltk_data]    | Downloading package names to /root/nltk_data...
+[nltk_data]    |   Package names is already up-to-date!
 [nltk_data]    | Downloading package shakespeare to /root/nltk_data...
-[nltk_data]    |   Unzipping corpora/shakespeare.zip.
+[nltk_data]    |   Package shakespeare is already up-to-date!
 [nltk_data]    | Downloading package stopwords to /root/nltk_data...
-[nltk_data]    |   Unzipping corpora/stopwords.zip.
+[nltk_data]    |   Package stopwords is already up-to-date!
 [nltk_data]    | Downloading package treebank to /root/nltk_data...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping corpora/treebank.zip.
+[nltk_data]    |   Package treebank is already up-to-date!
 [nltk_data]    | Downloading package twitter_samples to
 [nltk_data]    |     /root/nltk_data...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping corpora/twitter_samples.zip.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package omw to /root/nltk_data...
+[nltk_data]    |   Package twitter_samples is already up-to-date!
+[nltk_data]    | Downloading package omw to /root/nltk_data...
+[nltk_data]    |   Package omw is already up-to-date!
 [nltk_data]    | Downloading package omw-1.4 to /root/nltk_data...
+[nltk_data]    |   Package omw-1.4 is already up-to-date!
+[nltk_data]    | Downloading package wordnet to /root/nltk_data...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package wordnet to /root/nltk_data...
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Package wordnet is already up-to-date!
 [nltk_data]    | Downloading package wordnet2021 to /root/nltk_data...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package wordnet31 to /root/nltk_data...
+[nltk_data]    |   Package wordnet2021 is already up-to-date!
+[nltk_data]    | Downloading package wordnet31 to /root/nltk_data...
+[nltk_data]    |   Package wordnet31 is already up-to-date!
 [nltk_data]    | Downloading package wordnet_ic to /root/nltk_data...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping corpora/wordnet_ic.zip.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package words to /root/nltk_data...
-[nltk_data]    |   Unzipping corpora/words.zip.
+[nltk_data]    |   Package wordnet_ic is already up-to-date!
+[nltk_data]    | Downloading package words to /root/nltk_data...
+[nltk_data]    |   Package words is already up-to-date!
 [nltk_data]    | Downloading package maxent_ne_chunker to
 [nltk_data]    |     /root/nltk_data...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping chunkers/maxent_ne_chunker.zip.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package punkt to /root/nltk_data...
+[nltk_data]    |   Package maxent_ne_chunker is already up-to-date!
+[nltk_data]    | Downloading package punkt to /root/nltk_data...
 [nltk_data]    |   Package punkt is already up-to-date!
 [nltk_data]    | Downloading package snowball_data to
 [nltk_data]    |     /root/nltk_data...
+[nltk_data]    |   Package snowball_data is already up-to-date!
 [nltk_data]    | Downloading package averaged_perceptron_tagger to
 [nltk_data]    |     /root/nltk_data...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping taggers/averaged_perceptron_tagger.zip.
+[nltk_data]    |   Package averaged_perceptron_tagger is already up-
+[nltk_data]    |       to-date!
 [nltk_data]    | 
 [nltk_data]  Done downloading collection popular
 </pre></div>
@@ -1502,7 +1433,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-9cd05ef2-afc3-43c1-bf6b-ae7c9ec6e790">
+  <div id="df-eb41cdf8-df02-46bd-b037-50170d2c6eca">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1555,7 +1486,7 @@ dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-9cd05ef2-afc3-43c1-bf6b-ae7c9ec6e790')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-eb41cdf8-df02-46bd-b037-50170d2c6eca')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1606,12 +1537,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-9cd05ef2-afc3-43c1-bf6b-ae7c9ec6e790 button.colab-df-convert');
+          document.querySelector('#df-eb41cdf8-df02-46bd-b037-50170d2c6eca button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-9cd05ef2-afc3-43c1-bf6b-ae7c9ec6e790');
+          const element = document.querySelector('#df-eb41cdf8-df02-46bd-b037-50170d2c6eca');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1645,7 +1576,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-25b5eda9-206b-4a6b-81e7-79e68002ed71">
+  <div id="df-61e6da86-22ce-4e20-b430-ace26b185242">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1698,7 +1629,7 @@ dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-25b5eda9-206b-4a6b-81e7-79e68002ed71')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-61e6da86-22ce-4e20-b430-ace26b185242')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1749,12 +1680,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-25b5eda9-206b-4a6b-81e7-79e68002ed71 button.colab-df-convert');
+          document.querySelector('#df-61e6da86-22ce-4e20-b430-ace26b185242 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-25b5eda9-206b-4a6b-81e7-79e68002ed71');
+          const element = document.querySelector('#df-61e6da86-22ce-4e20-b430-ace26b185242');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1828,7 +1759,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-74549e5c-3c88-4f82-b9bf-5df2b58d6090">
+  <div id="df-b04e4e61-1512-47ea-a051-7dbd19aeea20">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1881,7 +1812,7 @@ dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-74549e5c-3c88-4f82-b9bf-5df2b58d6090')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b04e4e61-1512-47ea-a051-7dbd19aeea20')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1932,12 +1863,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-74549e5c-3c88-4f82-b9bf-5df2b58d6090 button.colab-df-convert');
+          document.querySelector('#df-b04e4e61-1512-47ea-a051-7dbd19aeea20 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-74549e5c-3c88-4f82-b9bf-5df2b58d6090');
+          const element = document.querySelector('#df-b04e4e61-1512-47ea-a051-7dbd19aeea20');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2017,7 +1948,7 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "84d1436a109f4e93bc191a0540fecaaf"}</script><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "cbb43eeb3d884d5d917edba02931cb98"}</script><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
 <span class="nn">&lt;ipython-input-31-8afd3414c2b0&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Stemming abstrak</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;abstrak_tokens&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;abstrak_tokens&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">progress_apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
@@ -2099,11 +2030,11 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
 <span class="g g-Whitespace">     </span><span class="mi">39</span><span class="s2">         #step 6</span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">start_stemming_process</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span><span class="s2">         if csPrecedenceAdjustmentSpecification.is_satisfied_by(self.original_word):</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span><span class="s2">             #step 4, 5</span>
-<span class="ne">---&gt; </span><span class="mi">60</span><span class="s2">             self.remove_prefixes()</span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="s2">             if self.dictionary.contains(self.current_word):</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span><span class="s2">                 return</span>
+<span class="g g-Whitespace">     </span><span class="mi">78</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">79</span><span class="s2">         #step 4, 5</span>
+<span class="ne">---&gt; </span><span class="mi">80</span><span class="s2">         self.remove_prefixes()</span>
+<span class="g g-Whitespace">     </span><span class="mi">81</span><span class="s2">         if self.dictionary.contains(self.current_word):</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="s2">             return</span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">remove_prefixes</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">     </span><span class="mi">87</span><span class="s2">     def remove_prefixes(self):</span>
@@ -2133,7 +2064,7 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f7e308f8-f43b-48c9-b339-16bf1d0020ce">
+  <div id="df-176674fe-df7f-4002-bab5-345c84e0a97b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2186,7 +2117,7 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f7e308f8-f43b-48c9-b339-16bf1d0020ce')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-176674fe-df7f-4002-bab5-345c84e0a97b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2237,12 +2168,12 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f7e308f8-f43b-48c9-b339-16bf1d0020ce button.colab-df-convert');
+          document.querySelector('#df-176674fe-df7f-4002-bab5-345c84e0a97b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f7e308f8-f43b-48c9-b339-16bf1d0020ce');
+          const element = document.querySelector('#df-176674fe-df7f-4002-bab5-345c84e0a97b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2276,14 +2207,14 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dataOlah = pd.read_csv(&#39;DataOlah_Pta.csv&#39;, index_col=0)</span>
-<span class="n">dataOlah</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/Arbiansa/ProyekSainData/main/DataOlah_Pta.csv&#39;</span><span class="p">)</span>
+<span class="n">dataOlah</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/ranianuraini/prosainsdata/main/DataOlah_Pta.csv&#39;</span><span class="p">)</span>
 <span class="n">dataOlah</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c9c236f6-bc02-4007-82ff-23cf324e97d7">
+  <div id="df-3d14444f-f98c-492e-959b-5eae7139a918">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2372,7 +2303,7 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c9c236f6-bc02-4007-82ff-23cf324e97d7')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3d14444f-f98c-492e-959b-5eae7139a918')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2423,12 +2354,12 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c9c236f6-bc02-4007-82ff-23cf324e97d7 button.colab-df-convert');
+          document.querySelector('#df-3d14444f-f98c-492e-959b-5eae7139a918 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c9c236f6-bc02-4007-82ff-23cf324e97d7');
+          const element = document.querySelector('#df-3d14444f-f98c-492e-959b-5eae7139a918');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2483,7 +2414,7 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-36eb7577-fdd7-4fcf-b80e-430b754015b5">
+  <div id="df-721f6c1b-8987-46be-bf36-b8630d7bef9a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2795,7 +2726,7 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
 </table>
 <p>809 rows × 6442 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-36eb7577-fdd7-4fcf-b80e-430b754015b5')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-721f6c1b-8987-46be-bf36-b8630d7bef9a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2846,12 +2777,12 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
 
       <script>
         const buttonEl =
-          document.querySelector('#df-36eb7577-fdd7-4fcf-b80e-430b754015b5 button.colab-df-convert');
+          document.querySelector('#df-721f6c1b-8987-46be-bf36-b8630d7bef9a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-36eb7577-fdd7-4fcf-b80e-430b754015b5');
+          const element = document.querySelector('#df-721f6c1b-8987-46be-bf36-b8630d7bef9a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2931,7 +2862,7 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">model_knn</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
 <span class="n">predictions_knn</span> <span class="o">=</span> <span class="n">model_knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 </pre></div>
@@ -2940,8 +2871,8 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-109-b58bf29454d2&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nn">&lt;ipython-input-40-b2a0cd238608&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">model_knn</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">predictions_knn</span> <span class="o">=</span> <span class="n">model_knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 
@@ -2966,18 +2897,6 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-62-ceb761b80b27&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">bayes</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">model_bayes</span> <span class="o">=</span> <span class="n">bayes</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">predictions_bayes</span> <span class="o">=</span> <span class="n">model_bayes</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;X_train&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="evaluasi">
@@ -2988,18 +2907,6 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Report the confusion matrix</span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictions_knn</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-63-5e83c2e03b0c&gt;</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Report the confusion matrix</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictions_knn</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;y_test&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -3123,15 +3030,6 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.10/dist-packag
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="Pipeline.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><strong>Tugas Pipelines</strong></p>
-      </div>
-    </a>
 </div></div>
   
 </div>
